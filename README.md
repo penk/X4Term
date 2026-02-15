@@ -26,11 +26,19 @@ A pocket e-ink VT100 terminal for the [Xteink X4](https://www.xteink.com/product
 
 ## Build
 
-Requires [PlatformIO](https://platformio.org/) and the [open-x4-sdk](https://github.com/open-x4-epaper/community-sdk) libraries.
+Requires [PlatformIO](https://platformio.org/) and the [open-x4-sdk](https://github.com/open-x4-epaper/community-sdk) (included as a git submodule).
 
 ```
+git clone --recursive https://github.com/penk/X4Term.git
+cd X4Term
 pio run            # build
 pio run -t upload  # flash
+```
+
+If you already cloned without `--recursive`:
+
+```
+git submodule update --init --recursive
 ```
 
 ## Usage
